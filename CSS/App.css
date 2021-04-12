@@ -1,0 +1,31 @@
+#login-wrap{
+    display: relative;
+}
+
+#login-wrap img{
+    /* display: relative; */
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+}
+
+/* button-area */
+#button-area{
+	text-align: center;
+	position: absolute;
+    width: 100%;
+    height: 428px;
+    /* width: 375px;
+    height: 428px; */
+    z-index:2;
+    top: 384px;
+}
+
+#button-area-square{
+    position: absolute;
+    width: 100%;
+    height: 428px;
+    border-radius: 25px;
+    background: #FFFFFF;
+}
+
