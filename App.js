@@ -3,6 +3,7 @@ import { View, Button, TextInput } from 'react-native';
 import * as SecureStore from 'expo-secure-store';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
+import './App.css';
 
 //Screen import
 import HomeScreen from './Screen/HomeScreen';
@@ -103,22 +104,28 @@ export default function App({ navigation }) {
         <div id = "login-wrap">
           <img src={LoginImg}/>
           <div id = "button-area">
-            <div id = "button-area-square"></div>
-            <TextInput
-              placeholder="Username"
-              value={username}
-              onChangeText={setUsername}
-            />
-            <br/>
-            <TextInput
-              placeholder="Password"
-              value={password}
-              onChangeText={setPassword}
-              secureTextEntry
-            />
-            {/* <Button title="Sign in" onPress={() => signIn({ username, password })} /> */}
-            <Button title="Sign in" onPress={() => signIn({ username, password })} />
-            <Button title="Start without Sign in" onPress={() => signIn(true)} />
+            <div id = "button-area-square">
+              {/* <TextInput
+                placeholder="Username"
+                value={username}
+                onChangeText={setUsername}
+              />
+              <br/>
+              <TextInput
+                placeholder="Password"
+                value={password}
+                onChangeText={setPassword}
+                secureTextEntry
+              /> */}
+              <div id='mainText-div'>
+                <div className='mainText'>Welcome</div>
+                <div className='mainText'>Select the style you want to learn!</div>
+              </div>
+              {/* <Button className='mainBtn' title="Login" onPress={() => signIn({ username, password })} />
+              <Button className='mainBtn' title="Start without Sign in" onPress={() => signIn(true)} /> */}
+              <button className='mainBtn' onClick={() => signIn({ username, password })}>Login</button>
+              <button className='mainBtn' onClick={() => signIn(true)}>Start without login</button>
+            </div>
           </div>
         </div>
       </View>
@@ -132,7 +139,7 @@ export default function App({ navigation }) {
           {state.userToken == null ? (
             <Stack.Screen name="SignIn" component={SignInScreen} options={{headerShown: false}} />
           ) : (
-            <Stack.Screen name="Home" component={HomeScreen} />
+            <Stack.Screen name="Home" component={HomeScreen} options={{headerShown: false}} />
           )}
         </Stack.Navigator>
       </NavigationContainer>
