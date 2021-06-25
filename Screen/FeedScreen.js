@@ -19,8 +19,8 @@ function FeedScreen() {
             <div id='date-div'>2021 / 06 / 25</div>
             <div id='video-div'>
                 <div id='video-preImg-div'>
-                    <Icon id='aaa' name='chevron-left' size={20}/>
                     <img id='preImg' src={BowlingImage}/>
+                    <Icon id='aaa' name='chevron-left' size={35}/>
                 </div>
                 <div id='video-nowImg-div'>
                     <img id='nowImg' src={BowlingImage}/>
@@ -28,7 +28,7 @@ function FeedScreen() {
                 </div>
                 <div id='video-nextImg-div'>
                     <img id='nextImg' src={BowlingImage}/>
-                    <Icon name="chevron-right" size={20}/>
+                    <Icon name="chevron-right" size={35}/>
                 </div>
             </div>
             <div id='info-div'>
