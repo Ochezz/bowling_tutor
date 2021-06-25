@@ -101,10 +101,10 @@ export default function App({ navigation }) {
   
     return (
       <View>
-        <div id = "login-wrap">
+        <div id = 'login-wrap'>
           <img src={LoginImg}/>
-          <div id = "button-area">
-            <div id = "button-area-square">
+          <div id = 'button-area'>
+            <div id = 'button-area-square'>
               {/* <TextInput
                 placeholder="Username"
                 value={username}

@@ -4,6 +4,9 @@ import { createMaterialBottomTabNavigator } from '@react-navigation/material-bot
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import { useState } from 'react/cjs/react.development';
 
+//CSS import
+import '../CSS/HomeScreen.css';
+
 //Screen import
 import FeedScreen from './FeedScreen';
 import AccountScreen from './AccountScreen';
@@ -17,8 +20,8 @@ function HomeScreen() {
   return (
     <Tab.Navigator
       initialRouteName="Feed"
-      activeColor="#e91e63"
-      barStyle={{ backgroundColor: 'tomato' }}
+      activeColor="black"
+      barStyle={{ backgroundColor: 'white' }}
     >
       <Tab.Screen
         name="FeedScreen"
@@ -26,7 +29,7 @@ function HomeScreen() {
         options={{
           tabBarLabel: '',
           tabBarIcon: ({ color }) => (
-            <MaterialCommunityIcons name="heart-outline" color={color} size={26} />
+            <MaterialCommunityIcons name='heart' color={color} size={26} />
           ),
         }}
       />
@@ -36,7 +39,7 @@ function HomeScreen() {
         options={{
           tabBarLabel: '',
           tabBarIcon: ({ color }) => (
-            <MaterialCommunityIcons name="account-circle-outline" color={color} size={26} />
+            <MaterialCommunityIcons name='account' color={color} size={26} />
           ),
         }}
       />
@@ -46,7 +49,7 @@ function HomeScreen() {
         options={{
           tabBarLabel: '',
           tabBarIcon: ({ color }) => (
-            <MaterialCommunityIcons name="cog-outline" color={color} size={26} />
+            <MaterialCommunityIcons name='cog' color={color} size={26} />
           ),
         }}
       />
