@@ -30,6 +30,7 @@
 
 #video-nowImg-div > div[class="css-text-901oao"] {
     opacity: 90%;
+    z-index: 99;
 }
 
 #video-nextImg-div > div[class="css-text-901oao"] {
@@ -63,6 +64,8 @@
     border-width: 3px;
     border-color: #456481;
     /* position: absolute; */
+
+    z-index: 99;
 }
 
 #video-nowImg-div {
